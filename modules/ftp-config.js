@@ -24,6 +24,7 @@ module.exports = {
         debug: false,
         privateKeyPath: null,
         passphrase: null,
+        agent: null,
 		ignore: ["\\.vscode","\\.git"]
 	},
 	getConfig: function() {
@@ -57,6 +58,7 @@ module.exports = {
             protocol: config.protocol || "ftp",
             privateKeyPath: config.privateKeyPath,
             passphrase: config.passphrase,
+            agent: config.agent,
             debug: config.debug ? function(msg) {
                 output(msg);
             } : null
